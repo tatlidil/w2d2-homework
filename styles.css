@@ -6,7 +6,7 @@ header {
 }
 #home header {
     background:  no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: 1500px;
+    background-size: cover;
 }
 .main-header {
     background-color:rgb(255, 255, 255, 0.8) ;
@@ -51,6 +51,12 @@ header {
 }
 .main-menu ul li.active a {
     color: #fff;
+}
+.navbar-nav{
+    margin-top: -8px;
+}
+.navbar-toggler {
+    margin: 34px;
 }
 
 /* Main */
@@ -145,12 +151,38 @@ footer #nondisclaimer .social .fa-instagram {
 
 /* Home */
 
+#partners .partner img {
+    border-radius: 50%; 
+    max-width: 100%; 
+    margin: 10px; 
+}
+@media (min-width: 576px) {
+    #partners .partner {
+        width: calc(50% - 20px); 
+    }
+}
 
+@media (min-width: 768px) {
+    #partners .partner {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    #partners .partner {
+        width: calc(16.66% - 20px);
+    }
+}
+@media (max-width: 573px) {
+    .navbar-collapse {
+        background-color: white;
+    }
+}
 
 /* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
 
 /* Media Queries */
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     footer #nondisclaimer .copy {
         padding: 3.5em 0em 3.5em 0em;
         text-align: center;
@@ -172,7 +204,7 @@ footer #nondisclaimer .social .fa-instagram {
     }
     .main-menu {
         width: 200px;
-        background-color:rgb(255, 255, 255);
+        /* background-color:rgb(255, 255, 255); */
         position: absolute;
         right: 1.7em;
       }
@@ -188,4 +220,4 @@ footer #nondisclaimer .social .fa-instagram {
         min-height: 450px;
         margin-top: 1em;
       }
-} */
+}
